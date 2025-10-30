@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form method="get">
+
+        <input type="text" name="search" placeholder="Search..." value="{{ query }}">
+        <button type="submit">Search</button>
+
+    </form>
+
+    <ul>
+
+        {% for Post_Item in post %}
+
+            <li>{{ Post_Item.Title }}</li>
+
+        {% empty %}
+
+            <li>No List Here!!</li>
+
+        {% endfor %}
+
+    </ul>
+    
+</body>
+</html>
